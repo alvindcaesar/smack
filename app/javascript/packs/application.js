@@ -5,6 +5,7 @@
 
 window.Rails = require("@rails/ujs")
 require("@hotwired/turbo-rails")
+import "@hotwired/turbo-rails"
 require("@rails/activestorage").start()
 require("channels")
 //require("trix")
@@ -19,6 +20,7 @@ import "controllers"
 
 // Bootstrap
 import 'bootstrap'
+
 
 document.addEventListener("turbo:load", () => {
   var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
