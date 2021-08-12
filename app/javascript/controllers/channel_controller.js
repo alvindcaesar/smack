@@ -26,6 +26,9 @@ export default class extends Controller {
   _received(data) {
     if (data.message) {
       this.messagesTarget.insertAdjacentHTML('beforeend', data.message)
+      if (!document.hidden) {
+        this.subscription.perform("mark_as_read")
+      }
     }
   }
 
