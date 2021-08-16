@@ -1,24 +1,18 @@
-# README
+# SmackApp - A barebone super simple chat app
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A Slack chat clone built using Rails, StimulusJS and Action Cable.
 
-Things you may want to cover:
+[Check out the deployed site](https://smackapp.alvindcaesar.com)
 
-* Ruby version
+## How to setup locally
 
-* System dependencies
+- Clone this repo
+- ~cd into the directory and run:
 
-* Configuration
+```rb
+bundle install 
+yarn install
+rails db:create && db:migrate
+```
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- Then run <code>rails s</code> to see SmackApp in action.
