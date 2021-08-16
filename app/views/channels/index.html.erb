@@ -1,41 +1,61 @@
 
 
+<% if user_signed_in? %>
+  <div class="row">
+    <div class="col-sm-6">
+      <h1>Channels</h1>
+    </div>
 
-<div class="row">
-  <div class="col-sm-6">
-    <h1>Channels</h1>
+    <div class="col-sm-6 text-end">
+    <%= link_to new_channel_path, class: 'btn btn-primary' do %>
+      Add New Channel
+    <% end %>
+    </div>
   </div>
 
-  <div class="col-sm-6 text-end">
-  <%= link_to new_channel_path, class: 'btn btn-primary' do %>
-    Add New Channel
-  <% end %>
-  </div>
-</div>
+  <div class="table-responsive">
+    <table class="table table-striped table-bordered table-hover">
+      <thead>
+        <tr>
+      
+          <th>Name</th>
+      
 
-<div class="table-responsive">
-  <table class="table table-striped table-bordered table-hover">
-    <thead>
-      <tr>
-    
-        <th>Name</th>
-    
+              
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @channels.each do |channel| %>
+          <%= content_tag :tr, id: dom_id(channel), class: dom_class(channel) do %>
+            
+              <td><%= link_to channel.name, channel %></td>
+            
 
             
-      </tr>
-    </thead>
-
-    <tbody>
-      <% @channels.each do |channel| %>
-        <%= content_tag :tr, id: dom_id(channel), class: dom_class(channel) do %>
-          
-            <td><%= link_to channel.name, channel %></td>
-          
-
-          
-          
+            
+          <% end %>
         <% end %>
-      <% end %>
-    </tbody>
-  </table>
-</div>
+      </tbody>
+    </table>
+  </div>
+<% else %>
+  <section class="section section-header text-dark pb-md-8">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-md-10 text-center mb-5 mb-md-7">
+                        <h1 class="display-2 font-weight-bolder mb-4">
+                            Smack - A Group Chat App
+                        </h1>
+                        <p class="lead mb-4 mb-lg-5">A slack clone chat app built using Ruby on Rails</p>
+                        <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-primary btn-lg" %>
+                        <%= link_to "Log In", new_user_registration_path, class: "btn btn-secondary btn-lg" %>
+                        <br>
+                        <br>
+                        <a class="github-button" href="https://github.com/alvindcaesar" data-size="large" aria-label="Follow @alvindcaesar on GitHub">Follow @alvindcaesar</a>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+<% end %>
