@@ -18,7 +18,7 @@ Basic features:
 - Bootstrap 5
 
 
-[Check out the deployed site](https://smackapp.alvindcaesar.com)
+[Check out the deployed site](http://smackapp.alvindcaesar.com)
 
 ## How to setup locally
 
