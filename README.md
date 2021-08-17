@@ -15,6 +15,8 @@ Basic features:
 - Rails 6.1.4
 - StimulusJS
 - Action Cable
+- Redis
+- Sidekiq
 - Bootstrap 5
 
 
