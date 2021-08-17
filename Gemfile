@@ -51,3 +51,12 @@ gem 'pundit', '~> 2.1'
 gem 'sidekiq', '~> 6.2'
 gem 'sitemap_generator', '~> 6.1'
 gem 'whenever', require: false
+
+gem 'capistrano', '~> 3.16'
+gem 'capistrano-rails', '~> 1.6', '>= 1.6.1'
+gem 'capistrano-passenger', '~> 0.2.1'
+gem 'capistrano-rbenv', '~> 2.2'
+
+gem 'net-ssh', '>= 6.0.2'
+gem 'ed25519', '>= 1.2', '< 2.0'
+gem 'bcrypt_pbkdf', '>= 1.0', '< 2.0'
