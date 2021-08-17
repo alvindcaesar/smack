@@ -21,6 +21,7 @@ Basic features:
 
 
 [Check out the deployed site](http://smackapp.alvindcaesar.com)
+*(There is a WebSocket error on this live site because I haven't optimize the deployment server to fully compatible with Action Cable. Try run it on local environment instead)*
 
 ## How to setup locally
 
