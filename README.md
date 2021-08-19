@@ -31,7 +31,7 @@ Basic features:
 ```rb
 bundle install 
 yarn install
-rails db:create && db:migrate
+rails db:create db:migrate
 ```
 
 - Then run <code>rails s</code> to see SmackApp in action.
